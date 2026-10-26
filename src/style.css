@@ -31,7 +31,7 @@ h1, h2, p{
     font-style: normal;
 }
 
-#sessao-image, #descricao-image, .container, #box-projetos{
+#descricao-image, .container, #box-projetos{
         display: flex;
 }
 
@@ -53,30 +53,51 @@ p{
 
 
 
-.nome{
+.nome {
     color: var(--light);
     font-size: 70px;
-    margin-bottom: 0px;
-    padding-top: 30%;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-weight: 200;
+    line-height: 70px;
 }
 
-#descricao-inicial{
+
+#descricao-inicial {
     color: var(--light);
-    margin-top: -30px;
+    font-size: 30px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
 }
 
-#sessao-image{
-    flex-direction: row;
-    align-items: center;
-    padding-top: 22px;
-    padding-bottom: 22px;
-}
-
-#descricao-image{
-    flex-direction: column;
+#sessao-image {
+    min-height: 100vh;
+    display: flex;
     justify-content: center;
-    padding-left: 5%;
-    padding-bottom: 15%;
+    align-items: center;
+
+    animation: aparecerDeCima 1.3s ease-out both;
+}
+
+#sessao-image {
+    position: relative;
+    z-index: 1;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+
+#descricao-image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0px;
+    padding: 0;
 }
 
 .container{
@@ -94,11 +115,19 @@ img{
 
 
 
-#fundo-azulado{
-    width: 100vw;
-    height: justify;
+#fundo-azulado {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
     background-color: var(--dark);
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 15px 10px -4px, rgba(0, 0, 0, 0.3) 0px 1px 10px -1px;
+    overflow: hidden;
+}
+
+#particulas {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
 }
 
 #fundo-branco{
@@ -186,4 +215,18 @@ img{
     height: 50px;
     background-color: var(--dark);
     box-shadow: rgba(50, 50, 93, 0.25) 0px -15px 10px -4px, rgba(0, 0, 0, 0.3) 0px -1px 10px -1px;
+}
+
+
+/* Keyframes abaixo*/
+@keyframes aparecerDeCima {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
