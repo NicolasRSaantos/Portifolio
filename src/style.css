@@ -72,6 +72,7 @@ p{
     text-align: center;
 }
 
+
 #descricao-desenvolvimento{
     color: var(--light);
     font-size: 15px;
@@ -79,7 +80,6 @@ p{
     padding: 0;
     text-align: center;
     color:rgba(249, 249, 250, 0.514);
-
 }
 
 #sessao-image {
