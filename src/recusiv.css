@@ -46,10 +46,6 @@
 }
 
 @media (max-width: 1000px) {
-
-    img{
-        display: none;
-    }
     .cardbox{
         width: 550px;
         height: 350px;
@@ -81,16 +77,83 @@
     }
 }
 
+@media (max-width: 490px){
 
-@media (max-width: 768px){
+    .box-projetos {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 90%;
+    }
 
-    
-}
+    .box-projetos a {
+        display: block;
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .cardbox {
+        width: 100%;
+        height: 220px;
+        box-sizing: border-box;
+    }
 
 
-@media (max-width: 480px){
-   .cardbox{
-      width: 95%;
-      height: 220px;
-   }
+   .nome {
+        color: var(--light);
+        font-size: 40px;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        font-weight: 200;
+        line-height: 70px;
+    }
+
+
+    #descricao-inicial {
+        color: var(--light);
+        font-size: 19px;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+
+
+    #descricao-desenvolvimento{
+        color: var(--light);
+        font-size: 15px;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        color:rgba(249, 249, 250, 0.514);
+    }
+
+    .descricao-geral{
+        max-width: 85%;
+        margin: 0 auto;
+        text-align: justify;
+    }
+
+    .info-projeto p{
+        margin-top: -20px;
+        display: flex;
+        flex-direction: column;
+        max-width: 400px;
+    }
+
+    h1{
+        text-align: center;
+        font-size: 27px;
+    }
+
+    h2{
+        text-align: left;
+        font-size: 24px;  
+    }
+
+    p{
+        margin-top: 10px;
+        font-size: 17px;
+        text-align: justify;
+    }
 }
