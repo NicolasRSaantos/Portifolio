@@ -403,7 +403,13 @@ img{
 
     font-size: 14px;
     color: var(--dark);
-    text-decoration: none;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    text-decoration-color: rgba(0, 0, 0, 0.507);
 }
 
 .card-projeto a:hover {
