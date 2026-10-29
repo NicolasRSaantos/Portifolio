@@ -18,6 +18,19 @@
 
         <div class="container">
             <div id="fundo-azulado">
+
+                <div class="seta-rolagem" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none">
+                        <path
+                            d="M12 4V20M5 13L12 20L19 13"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        />
+                    </svg>
+                </div>
+
                 <!-- Fundo animado -->
                 <div id="particulas"></div>
                 <div id="sessao-image">                    
@@ -29,58 +42,92 @@
                 </div>
             </div>
         
-            <div id="fundo-branco">
-                <div class="centralizador">
-                    <h1>Olá!</h1>
-                    <p class="descricao-geral">
-                        Sou estudante de Ciência da Computação, com grande interesse em tecnologia, inovação e soluções que geram impacto real. Tenho conhecimento em HTML, CSS, Java, SQL e Pandas, além de utilizar bastante o Figma no desenvolvimento de projetos pessoais, o que me ajuda a transformar ideias em algo mais visual e funcional.<br><br>
 
-                        Também venho me aprofundando no desenvolvimento de aplicações e atualmente sigo a trilha de React Native na Alura, buscando evoluir na criação de aplicativos mobile e ganhar mais experiência prática.<br><br>
-                        
-                        Sempre procuro ser proativo, com pensamento analítico e tenho facilidade de comunicação, o que contribui para trabalhar bem em equipe e buscar soluções eficientes. Estou sempre aprendendo, evoluindo na prática e em busca de novos desafios que me permitam evoluir como profissional.<br><br>
-                        
-                        Caso queira ver alguns deles, basta clicar em algum dos projetos abaixo! :) 
-                    </p>
-                </div>
+<div id="fundo-branco">
+    <div class="sobre-layout">
+        <div class="sobre-texto">
+            <h1>Olá!</h1>
+            <p>
+                Sou estudante de Ciência da Computação, com grande
+                interesse em tecnologia, inovação e soluções que
+                geram impacto real. Tenho conhecimento em HTML,
+                CSS, Java, SQL e Pandas, além de utilizar bastante
+                o Figma no desenvolvimento de projetos pessoais,
+                o que me ajuda a transformar ideias em algo mais
+                visual e funcional.
+            </p>
+            <p>
+                Também venho me aprofundando no desenvolvimento
+                de aplicações e atualmente sigo a trilha de React
+                Native na Alura, buscando evoluir na criação de
+                aplicativos mobile e ganhar mais experiência prática.
+            </p>
+            <p>
+                Sempre procuro ser proativo, com pensamento analítico
+                e tenho facilidade de comunicação, o que contribui
+                para trabalhar bem em equipe e buscar soluções
+                eficientes. Estou sempre aprendendo, evoluindo na
+                prática e em busca de novos desafios que me permitam
+                evoluir como profissional.
+            </p>
+            <p>
+                Caso queira ver alguns deles, basta clicar em
+                algum dos projetos abaixo! :)
+            </p>
+        </div>
+        <div class="tecnologias">
+            <span>Figma</span>
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>Java</span>
+            <span>Python</span>
+            <span>MySQL</span>
+            <span>Pandas</span>
+        </div>
+    </div>
+
+    <section class="secao-projetos">
+        <h2 id="projetos">Projetos</h2>
+        <div class="grid-projetos">
+            <div class="card-projeto">
+                <h3>Front-End</h3>
+                <p>
+                    Desenvolvimento de sites, aplicativos e gráficos. 
+                    <br>Inclui: HTML, CSS, Java e Figma.
+                </p>
+                <a href="https://github.com/NicolasRSaantos/Front-End.git"
+                   target="_blank" rel="noopener noreferrer">
+                    Explorar
+                </a>
+            </div>
+            <div class="card-projeto">
+                <h3>Back-End</h3>
+                <p>
+                    Desenvolvimento de bancos de dados e tratamentos.
+                    <br>Inclui: MySQL, Python e Pandas.
+                </p>
+                <a href="https://github.com/NicolasRSaantos/Back-End.git"
+                   target="_blank" rel="noopener noreferrer">
+                    Explorar
+                </a>
+            </div>
+            <div class="card-projeto">
+                <h3>GitHub</h3>
+                <p>
+                    Explore meus códigos e repositórios.
+                    Conheça também outros projetos do meu perfil.
+                </p>
+                <a href="https://github.com/NicolasRSaantos"
+                   target="_blank" rel="noopener noreferrer">
+                    Explorar
+                </a>
             </div>
 
-            <div class="centralizador">
-                <h1 id="projetos">Projetos</h1>
+        </div>
+    </section>
 
-                <div class="projeto-item">
-                    <div class="box-projetos">
-                        <a href="https://github.com/NicolasRSaantos/Front-End.git" target="_blank"><div class="cardbox" id="frontend"></div></a>
+</div>
 
-                        <div class="info-projeto">
-                            <h2>Front-End</h2>
-                            <p>Desenvolvimento de sites, aplicativos e graficos.<br>
-                                    Inlcui: HTML, CSS, JAVA e Figma.</p>
-                        </div>
-
-                    </div>
-                        <div class="box-projetos">
-                        <a href="https://github.com/NicolasRSaantos/Back-End.git" target="_blank"><div class="cardbox" id="backend"></div></a>
-
-                        <div class="info-projeto">
-                            <h2>Back-End</h2>
-                            <p>Desenvolvimento de bancos de dados e tratamentos.<br>
-                            Inclui: MySQL, Python e Pandas.</p>
-                        </div>
-
-                        
-                    </div>
-                        <div class="box-projetos" >
-                        <a href="https://github.com/NicolasRSaantos" target="_blank"><div class="cardbox" id="github"></div></a>
-
-                        <div class="info-projeto">
-                            <h2>GitHub</h2>
-                            <p>Caso queria dar uma olhada geral no perfil, basta clicar no card acima. Também, existem codigos não inclusos nos cards ao lado.</p>
-                        </div>
-
-                        
-                    </div>
-                </div>
-            </div>
 
            <div id="rodape"></div>
         </div>
@@ -96,5 +143,7 @@
             }, 90);
         </script>
 
+
+    <script src="src/som-cards.js"></script>
     </body>
 </html>

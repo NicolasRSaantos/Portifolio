@@ -233,6 +233,218 @@ img{
 }
 
 
+/* NOVA SEÇÃO SOBRE MIM */
+
+#fundo-branco {
+    width: 100%;
+    background-color: white;
+    padding-top: 0;
+}
+
+.sobre-layout {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 5% 30px;
+    box-sizing: border-box;
+}
+
+.sobre-texto {
+    width: 100%;
+    max-width: 550px;
+}
+
+.sobre-texto h1 {
+    text-align: left;
+    font-size: 36px;
+    font-weight: 400;
+    margin: 0 0 25px;
+}
+
+.sobre-texto p {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.7;
+    text-align: left;
+    margin: 0 0 18px;
+}
+
+/*Cards laterais*/
+.sobre-layout {
+    max-width: 1450px;
+    margin: 0 auto;
+    padding: 60px 5% 30px;
+    box-sizing: border-box;
+
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    align-items: center;
+    gap: 50px;
+}
+
+.tecnologias {
+    width: 100%;
+    max-width: 480px;
+
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 10px;
+
+    justify-self: center;
+}
+
+
+.tecnologias span {
+    min-height: 90px;
+    padding: 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: 2px solid #dfe4ea;
+    border-radius: 13px;
+
+    font-size: 20px;
+    font-weight: 400;
+    text-align: center;
+    box-sizing: border-box;
+
+    transition: transform 0.3s ease;
+}
+
+.tecnologias span:hover {
+    transform: translateY(-5px);
+}
+
+.tecnologias span:nth-child(1) {
+    grid-area: 1 / 1;
+}
+
+.tecnologias span:nth-child(2) {
+    grid-area: 1 / 2;
+}
+
+.tecnologias span:nth-child(3) {
+    grid-area: 2 / 2;
+}
+
+.tecnologias span:nth-child(4) {
+    grid-area: 2 / 3;
+}
+
+.tecnologias span:nth-child(5) {
+    grid-area: 3 / 1;
+}
+
+.tecnologias span:nth-child(6) {
+    grid-area: 3 / 2;
+}
+
+.tecnologias span:nth-child(7) {
+    grid-area: 4 / 2;
+}
+
+/* NOVOS CARDS DE PROJETOS */
+
+.secao-projetos {
+    width: 100%;
+    max-width: 1370px;
+    margin: 0 auto;
+    padding: 20px 3% 130px;
+    box-sizing: border-box;
+}
+
+.secao-projetos #projetos {
+    display: block;
+    text-align: center;
+    font-size: 34px;
+    font-weight: 400;
+    margin: 0 0 30px;
+    padding: 0;
+}
+
+.grid-projetos {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 35px;
+}
+
+.card-projeto {
+    min-height: 190px;
+    padding: 22px;
+
+    display: flex;
+    flex-direction: column;
+
+    border: 1px solid #dfe4ea;
+    border-radius: 14px;
+    background-color: white;
+
+    transition: transform 0.3s ease;
+}
+
+.card-projeto h3 {
+    font-size: 20px;
+    font-weight: 400;
+    margin: 0 0 10px;
+}
+
+.card-projeto p {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.6;
+    text-align: left;
+    margin: 0 0 20px;
+}
+
+.card-projeto a {
+    margin-top: auto;
+    align-self: flex-start;
+
+    font-size: 14px;
+    color: var(--dark);
+    text-decoration: none;
+}
+
+.card-projeto a:hover {
+    text-decoration: underline;
+}
+
+.card-projeto:hover {
+    transform: translateY(-5px);
+}
+
+#fundo-azulado {
+    position: relative;
+}
+
+.seta-rolagem {
+    position: absolute;
+    right: 50px;
+    bottom: 40px;
+
+    width: 40px;
+    height: 40px;
+
+    color: white;
+    opacity: 0;
+
+    pointer-events: none;
+    z-index: 10;
+
+    animation:
+        aparecerSeta 0.2s ease 0.5s forwards,
+        pularSeta 4.1s ease-in-out 0.7s forwards,
+        sumirSeta 0.6s ease 4.8s forwards;
+}
+
+.seta-rolagem svg {
+    width: 100%;
+    height: 100%;
+}
+
+
+
 /* Keyframes abaixo*/
 @keyframes aparecerDeCima {
     from {
@@ -243,5 +455,40 @@ img{
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+
+/* Aparecer depois de meio segundo */
+@keyframes aparecerSeta {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 0.6;
+    }
+}
+
+/* Três movimentos para baixo */
+@keyframes pularSeta {
+    0%, 8.54%, 17.08%, 25.62%,
+    74.38%, 82.92%, 91.46%, 100% {
+        transform: translateY(0);
+    }
+
+    4.27%, 12.81%, 21.35%,
+    78.65%, 87.19%, 95.73% {
+        transform: translateY(12px);
+    }
+}
+
+@keyframes sumirSeta {
+    from {
+        opacity: 0.6;
+    }
+
+    to {
+        opacity: 0;
     }
 }

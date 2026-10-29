@@ -111,7 +111,7 @@
         margin: 0;
         padding: 0;
         text-align: center;
-        font-weight: 400;
+        font-weight: 300;
         line-height: 70px;
         line-height: 1;
     }
@@ -123,7 +123,7 @@
         margin: 0;
         padding: 0;
         text-align: center;
-        font-weight: 300;
+        font-weight: 200;
     }
 
 
@@ -134,7 +134,7 @@
         padding: 0;
         text-align: center;
         color:rgba(249, 249, 250, 0.514);
-        font-weight: 300;
+        font-weight: 200;
     }
 
     .descricao-geral{
@@ -174,5 +174,155 @@
         color: var(--dark);
         font-weight: 300;
         text-align: left;
+    }
+}
+
+/* TABLETS */
+@media (max-width: 900px) {
+
+    .grid-projetos {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
+    }
+
+    .sobre-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .sobre-texto {
+        max-width: 100%;
+    }
+
+    .tecnologias {
+        width: 100%;
+        max-width: none;
+
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+
+        gap: 12px;
+        margin: 0;
+        justify-self: stretch;
+    }
+
+    .tecnologias span:nth-child(n) {
+        grid-area: auto;
+    }
+
+    .tecnologias span:last-child {
+        grid-column: auto;
+    }
+
+}
+
+/* CELULARES */
+@media (max-width: 600px) {
+
+    /* Seção Olá */
+    .sobre-layout {
+        padding: 40px 6% 20px;
+    }
+
+    .sobre-texto {
+        max-width: 100%;
+    }
+
+    .sobre-texto h1 {
+        font-size: 30px;
+    }
+
+    .sobre-texto p {
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+    /* Seção Projetos */
+    .secao-projetos {
+        padding: 30px 6% 60px;
+    }
+
+    .secao-projetos #projetos {
+        font-size: 28px;
+        margin-bottom: 25px;
+    }
+
+    .grid-projetos {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .card-projeto {
+        min-height: 170px;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    .card-projeto h3 {
+        font-size: 19px;
+    }
+
+    .card-projeto p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 850px) {
+
+    .sobre-layout {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .sobre-texto {
+        max-width: 100%;
+    }
+
+    .tecnologias {
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+
+/* TABLET - ATÉ 900px */
+@media (max-width: 900px) {
+    .tecnologias {
+        width: 100%;
+        max-width: none;
+        grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+        gap: 12px;
+    }
+
+    .tecnologias span {
+        min-height: 80px;
+        padding: 12px;
+        font-size: 17px;
+    }
+}
+
+/* TABLET MENOR - ATÉ 850px */
+@media (max-width: 850px) {
+    .tecnologias {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        gap: 10px;
+    }
+
+    .tecnologias span {
+        min-height: 70px;
+        padding: 10px;
+        font-size: 16px;
+    }
+}
+
+/* CELULAR - ATÉ 600px */
+@media (max-width: 600px) {
+    .tecnologias {
+        grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+        gap: 8px;
+    }
+
+    .tecnologias span {
+        min-height: 60px;
+        padding: 8px;
+        font-size: 14px;
     }
 }
